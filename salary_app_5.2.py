@@ -556,8 +556,8 @@ def apply_styles():
                 background: transparent !important;
                 border: none !important;
                 box-shadow: none !important;
-                color: var(--ink) !important;
-                -webkit-text-fill-color: var(--ink) !important;
+                color: #ffffff !important;
+                -webkit-text-fill-color: #ffffff !important;
                 height: var(--field-h);
                 padding-left: 0.9rem;
             }

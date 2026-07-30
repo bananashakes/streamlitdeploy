@@ -763,7 +763,7 @@ def apply_styles():
             .salary-float {
                 position: fixed;
                 right: 1.25rem;
-                bottom: 1.25rem;
+                bottom: 2.25rem;
                 z-index: 999;
                 display: block;
                 width: min(290px, calc(100vw - 2rem));

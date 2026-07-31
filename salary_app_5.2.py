@@ -1135,10 +1135,6 @@ except Exception as error:
     st.error(f"The salary model could not be loaded: {error}")
     st.stop()
 
-
-# --- Presentation-only values pulled from the loaded model package.
-#     These are real model facts (not predictions) used to dress the hero
-#     and stat band; none of them affect the prediction pipeline.
 hero_rows = model_package["training_rows"]
 hero_r2 = model_package["test_r2"]
 hero_mae = model_package["test_mae"]
@@ -1393,8 +1389,6 @@ with result_column:
             annual_salary + test_mae,
         )
 
-        # Derived (not hard-coded) framing: where this estimate falls
-        # within the model's own salary range. Purely presentational.
         range_span = (
             model_package["salary_ceiling"] - model_package["salary_floor"]
         )
@@ -1455,8 +1449,6 @@ with result_column:
                 use_container_width=True,
             )
         except Exception:
-            # Never let a chart hiccup break the result; fall back to a
-            # bright lime line that stays visible on any theme.
             st.line_chart(curve, color="#b9f45f")
         st.caption(
             "The curve changes professional experience and raises total coding "
